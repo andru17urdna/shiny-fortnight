@@ -10,11 +10,12 @@ range(3, 4); // [3]
 range(7, 6); // []
 ***********************************************************************/
 
-
+//              1      5
 function range(start, end){
   let array = [];
+  console.log(`this function was called with ${start}`);
   if (start === end-1){
-    array.push(start);  
+    array.push(start);
     return array;
   }
   else if (start >= end){
@@ -22,16 +23,18 @@ function range(start, end){
   }
   else{
     //array.push(start);
-    //array.push(...range(start+1, end));
-    console.log("counting up!");
+    // array.push(...range(start+1, end));
+
     array = [start, ...range(start+1, end)];
+    console.log(`parent array is ${array}`)
     return array;
     //return range(start+1, end);
   }
 }
-console.log(range(7, 21)); // [1, 2, 3, 4]
+console.log(range(1, 5)); // [1, 2, 3, 4]
 console.log(range(3, 4)); // [3]
 console.log(range(7, 6)); // []
+
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
