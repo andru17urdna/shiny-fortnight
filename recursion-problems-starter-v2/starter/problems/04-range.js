@@ -11,7 +11,27 @@ range(7, 6); // []
 ***********************************************************************/
 
 
-// your code here
+function range(start, end){
+  let array = [];
+  if (start === end-1){
+    array.push(start);  
+    return array;
+  }
+  else if (start >= end){
+    return [];
+  }
+  else{
+    //array.push(start);
+    //array.push(...range(start+1, end));
+    console.log("counting up!");
+    array = [start, ...range(start+1, end)];
+    return array;
+    //return range(start+1, end);
+  }
+}
+console.log(range(7, 21)); // [1, 2, 3, 4]
+console.log(range(3, 4)); // [3]
+console.log(range(7, 6)); // []
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

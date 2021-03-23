@@ -20,8 +20,8 @@ function sumArray(array){
   }
   else{
       // console.log(`This function call was initially passed ${array}, so I'm adding the last element of the array to the current total of ${sum} to make ${array[array.length -1] + sum}`)
-      sum += array[array.length -1]
-    return sum + sumArray(array.slice(0, array.length-1));
+      sum += array[0]
+    return sum + sumArray(array.slice(1));
 
   }
 }
