@@ -17,16 +17,16 @@ function reverse(string){ //sets default parameter
     return string;
   } else {
       reversed += string[string.length -1]
-     reverse(string.slice(0, string.length -1))
-     return reversed;
+     reversed += reverse(string.slice(0, string.length -1))
+     return reversed //+ string[string.length -1] + reverse(string.slice(0, string.length -1));
   }
 }
 
 console.log(reverse("house")); // "esuoh"
-reverse("dog"); // "god"
-reverse("atom"); // "mota"
-reverse("q"); // "q"
-reverse("id"); // "di"
+console.log(reverse("dog")); // "god"
+console.log(reverse("atom")); // "mota"
+console.log(reverse("q")); // "q"
+console.log(reverse("id")); // "di"
 console.log(""); // ""
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

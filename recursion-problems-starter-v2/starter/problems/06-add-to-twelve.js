@@ -12,7 +12,15 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
-// your code here
+function addToTwelve(array){
+  let total = 0;
+  
+  if(total === 12)
+    return true;
+  total = array[0] + array[1];
+  //array[0] + array[1] //add 1 to each of them until the second value is the array length
+
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
