@@ -11,14 +11,14 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 function sumToN(num) {
-  console.log(`I'm running the function and passing it ${num}`);
+  //console.log(`I'm running the function and passing it ${num}`);
   if (num === 0) {
-    console.log(`We've reached the base case of 0! Let's start going back up the stack.`)
+    //console.log(`We've reached the base case of 0! Let's start going back up the stack.`)
     return num;
 
   } else if (num > 0) {
     let sum = sumToN(num -1);
-    console.log(`This function call was initially passed ${num}, so I'm adding ${num} to the current total of ${sum} to make ${num + sum}`)
+    //console.log(`This function call was initially passed ${num}, so I'm adding ${num} to the current total of ${sum} to make ${num + sum}`)
     return num + sum;
 
   } else if (num < 0) {
@@ -26,7 +26,6 @@ function sumToN(num) {
 
   }
 
-    console.log(Hello chloe)
 }
 
 
