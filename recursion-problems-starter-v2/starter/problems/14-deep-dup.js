@@ -36,7 +36,47 @@ console.log(x[0] === y[0]) // true
 
 ***********************************************************************/
 
-// your code here
+
+
+
+function deepDup(array){
+  //   let returnarray = [];
+
+  // if (Array.isArray(array[1])){
+  //   returnarray.push(array[0]);
+  //   return array[1];
+  // }
+  // else{
+  //   returnarray = [array[0], deepDup(array.slice(1))];
+  //   return returnarray;
+  // }
+  let returnarray = [];
+  if (Array.isArray(array[array.length-1])){
+    array =  [...array.slice(0, array.length-1), ...array[array.length-1]];
+    return deepDup(array)
+  }
+  return array;
+
+  // let duplicatedArray = [];
+  // if (!Array.isArray(arr)){
+  //   duplicatedArray.push(arr);
+  //   return arr;
+  // }
+  // duplicatedArray.push(deepDup(arr.slice(1)));
+  // return duplicatedArray;
+}
+
+let arr = [[1], [2, [3]]];
+console.log(duped = deepDup(arr)); // [[1], [2, [3]]]
+console.log(arr[0] === duped[0]) // false
+console.log(arr[1] === duped[1]) // false
+console.log(arr[1][1] === duped[1][1]) // false
+
+
+let x = [1, 2, 3];
+let y = x.slice();
+console.log(x[0] === y[0]) // true
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
