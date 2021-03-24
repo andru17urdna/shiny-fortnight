@@ -39,7 +39,7 @@ function flatten(array){
 console.log(flatten([])); // []
 console.log(flatten([1, 2])); // [1, 2]
 console.log(flatten([1, [2, [3]]])); // [1, 2, 3]
-  
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = flatten;
