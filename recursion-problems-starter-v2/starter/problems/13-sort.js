@@ -22,20 +22,26 @@ sort([]); // []
 ***********************************************************************/
 
 function sort(nums, sorted = []) {
-  if (nums.length === 0)
-    return sorted;
-  
-    let min = nums[0];
-    let mindex = 0;
-    nums.forEach((el, i) =>{
-      if (min > el){
-        min = el;
-        mindex = i;}
-    });
-    sorted.push(min);
-    nums.splice(mindex, 1);
-    return sort(nums, sorted);
+    if (nums.length === 0) {
+      return sorted;
+    }
+    let smallNum = nums[0];
+    let minimumIndex = 0;
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] < smallNum) {
+      smallNum = nums[i];
+      minimumIndex = i;
+
+      }
+   }
+      let stolen = nums.splice(minimumIndex, 1);
+      sorted.push(...stolen);
+      return sort(nums, sorted);
+
+
 }
+
+
 
 console.log(sort([4,1,6,3,1,7])); // [1, 1, 3, 4, 6, 7]
 console.log(sort([0, 1, -3])); // [-3, 0, 1]
