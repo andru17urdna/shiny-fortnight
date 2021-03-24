@@ -19,7 +19,21 @@ fibonacci(4); // 3
 fibonacci(10); // 55
 ***********************************************************************/
 
-// your code here
+function fibonacci(n){
+  let currentFib = [0, 1];
+  if (n === 1){
+    return [1]
+  }
+  currentFib.slice(-2); //gives the last 2 numbers
+  //currentFib = [...currentFib, (currentFib[currentFib.length -2] + currentFib[currentFib.length -1]), ...fibonacci(n-1)];
+  return currentFib;
+}
+
+console.log(fibonacci(1)); // 1
+console.log(fibonacci(2)); // 1
+console.log(fibonacci(3)); // 2
+console.log(fibonacci(4)); // 3
+console.log(fibonacci(10)); // 55
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

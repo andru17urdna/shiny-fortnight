@@ -21,22 +21,24 @@ exponent(5, 5); // 3125
 ***********************************************************************/
 
 function exponent(b, n) {
+
+
   if (n === 1 || n === 0) {
     //console.log(`We've reached the base case of 0! Let's start going back up the stack.`)
     return b;
 
   } else if (n > 1) {
 
-    return b*exponent(b, n -1);
+    return b * exponent(b, n -1);
 
-  } else if (n < -1) {
-    return b/exponent(b, n +1)
+  } else if (n < 0) {
+    return exponent(b, n +1) / b
 
   }
 }
-console.log(exponent(3, 2)); // 9
-console.log(exponent(2, -2)); // 1/4 (or 0.25)
-console.log(exponent(5, 5)); // 3125
+// console.log(exponent(3, 2)); // 9
+console.log(exponent(2, -3)); // 1/4 (or 0.25)
+// console.log(exponent(5, 5)); // 3125
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
